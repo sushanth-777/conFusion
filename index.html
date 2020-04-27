@@ -9,54 +9,76 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>Ristorante Con Fusion</title>
     <style>
+    input[type="radio"]{
+    margin: 0 10px 0 10px;
+    }    
     body{
     padding:50px 0px 0px 0px;
     z-index:0;
     }
-
     .navbar-dark {
      background-color: #512DA8;
     }   
+    .card {
+        margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px;
+    }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-expand-lg navbar-light bg-light sticky-top">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#target">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="target">
-            <a class="navbar-brand"><img src="affect.jfif"></a>
-            <span class="navbar-text">corona</span>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> Emergency</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-        </ul>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="logo.png" height="30" width="41" class="img-fluid"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <header>
-        <div>
-            <div>
-                <div>
+    <header class="jumbotron" style="background-color: blueviolet;">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                <img src="logo.png">
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                <a role="button" class="btn btn-warning" href="#card">Reserve Table</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div>
-        <div>
-            <div>
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
-            <div>
-                <h2>Uthappizza</h2>
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="uthappizza.png" alt="uthappizza">
+                    <div class="media-body">
+                        <h2 class="mt-0w">Uthappizza</h2>
                 <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -82,43 +104,76 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        <div>
-            <div>             
-                <div>
+    <div class="row">
+    <div class="card col-12 col-md-6 col-lg-6" id="card">
+        <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+        <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label class="col-12 col-md-3 col-lg-3"><b>Number of Guests</b></label>
+                    <div class="col-12 col-md-9 col-lg-9">
+                        <input type="radio">1
+                        <input type="radio">2
+                        <input type="radio">3
+                        <input type="radio">4
+                        <input type="radio">5
+                        <input type="radio">6
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-12 col-md-3 col-lg-3"><b>Date and Time</b></label>
+                    <div class="col-12 col-md-9 col-lg-9">
+                        <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="date">
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="time">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <footer class="footer" style="background-color:lightgrey;">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
-                    <ul>
+                    <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
 		              121, Clear Water Bay Road<br>
 		              Clear Water Bay, Kowloon<br>
 		              HONG KONG<br>
-		              <span class="fa fa-phone"></span> : +852 1234 5678<br>
-		              <span class="fa fa-fax"></span> : +852 8765 4321<br>
-		              <span class="fa fa-envelope"></span> : <a href="mailto:confusion@food.net">confusion@food.net</a>
+                      <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                      <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                      <i class="fa fa-envelope fa-lg"></i>: 
+                      <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div>
-                    <div>
-                        <a href="http://google.com/+"><span class="fa fa-googleplus fa-lg"></span> </a>
-                        <a href="http://www.facebook.com/profile.php?id="><span class="fa fa-facebook fa-lg"></span> </a>
-                        <a href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i> </a>
-                        <a href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i> </a>
-                        <a href="http://youtube.com/"><span class="fa fa-youtube fa-lg"></span> </a>
-                        <a href="mailto:"><span class="fa fa-envelope fa-lg"></span> </a>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
                     </div>
                 </div>
            </div>
-           <div>             
-                <div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
            </div>
